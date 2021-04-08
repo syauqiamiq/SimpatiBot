@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simpati_bot/screens/home_page.dart';
 import 'package:simpati_bot/screens/login_page.dart';
 import 'package:simpati_bot/screens/register_page.dart';
 import 'package:simpati_bot/screens/splash_page.dart';
@@ -10,13 +11,14 @@ class PageRoutes extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/splash',
+      initialRoute: '/home_page',
       routes: {
         '/splash': (context) => Splash(),
         '/getStarted_page': (context) => GetStartedPage(),
         '/welcome_page': (context) => WelcomePage(),
         '/register_page': (context) => RegisterPage(),
-        '/login_page': (context) => LoginPage()
+        '/login_page': (context) => LoginPage(),
+        '/home_page': (context) => HomePage(),
       },
     );
   }

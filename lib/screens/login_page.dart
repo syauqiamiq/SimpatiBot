@@ -60,7 +60,9 @@ class LoginPage extends StatelessWidget {
                   ),
                   PrimaryButton(
                     label: "Login",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home_page');
+                    },
                   )
                 ],
               ),

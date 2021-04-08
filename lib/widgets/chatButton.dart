@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SecondaryButton extends StatelessWidget {
+class ChatButton extends StatelessWidget {
   final Function onPressed;
   final String label;
   final Widget icon;
-  SecondaryButton({this.onPressed, this.label, this.icon});
+  ChatButton({this.onPressed, this.label, this.icon});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,8 +20,9 @@ class SecondaryButton extends StatelessWidget {
           style: TextStyle(
               color: Colors.black,
               fontFamily: 'Nunito',
-              fontSize: 14,
-              fontWeight: FontWeight.w700),
+              fontSize: 20,
+              fontWeight: FontWeight.w800),
+          textAlign: TextAlign.center,
         ),
       ),
     );
