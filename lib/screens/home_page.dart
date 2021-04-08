@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:simpati_bot/screens/sidenav_page.dart';
 import 'package:simpati_bot/utils/colorPallete.dart';
 import 'package:simpati_bot/widgets/chatButton.dart';
 import 'package:simpati_bot/widgets/newsCard.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        drawerEnableOpenDragGesture: true,
+        drawer: SideNav(
+          nameHeader: "Muhammad Prayuda Riansyah",
+          emailHeader: "example@gmail.com",
+        ),
         body: SafeArea(
           child: Stack(children: <Widget>[
             Container(
@@ -16,7 +27,24 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 50,
+                    height: 20,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Builder(
+                          builder: (context) => IconButton(
+                            icon: Icon(Icons.settings),
+                            iconSize: 30,
+                            onPressed: () {
+                              Scaffold.of(context).openDrawer();
+                            },
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),

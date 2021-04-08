@@ -19,6 +19,7 @@ class PageRoutes extends StatelessWidget {
         '/register_page': (context) => RegisterPage(),
         '/login_page': (context) => LoginPage(),
         '/home_page': (context) => HomePage(),
+        '/drawer_page': (context) => Drawer(),
       },
     );
   }
