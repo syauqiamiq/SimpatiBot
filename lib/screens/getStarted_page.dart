@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:simpati_bot/utils/colorPallete.dart';
 
+import 'package:simpati_bot/widgets/secondaryButton.dart';
+
 class GetStartedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -57,20 +59,11 @@ class GetStartedPage extends StatelessWidget {
               SizedBox(
                 height: 150,
               ),
-              Container(
-                width: 240,
-                height: 46,
-                child: FloatingActionButton.extended(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/welcome_page');
-                  },
-                  backgroundColor: Colors.white,
-                  elevation: 15,
-                  label: Text(
-                    "GET STARTED",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                ),
+              SecondaryButton(
+                label: "GET STARTED",
+                onPressed: () {
+                  Navigator.pushNamed(context, '/welcome_page');
+                },
               )
             ],
           ),
