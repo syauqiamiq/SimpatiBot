@@ -168,7 +168,9 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   ChatButton(
                     label: "Chat Now",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/chat_page');
+                    },
                     icon: Image(
                       image: AssetImage('lib/assets/images/logo.png'),
                       width: 40,

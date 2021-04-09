@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simpati_bot/screens/chat_page.dart';
 import 'package:simpati_bot/screens/home_page.dart';
 import 'package:simpati_bot/screens/login_page.dart';
 import 'package:simpati_bot/screens/register_page.dart';
@@ -11,7 +12,7 @@ class PageRoutes extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/home_page',
+      initialRoute: '/splash',
       routes: {
         '/splash': (context) => Splash(),
         '/getStarted_page': (context) => GetStartedPage(),
@@ -20,6 +21,7 @@ class PageRoutes extends StatelessWidget {
         '/login_page': (context) => LoginPage(),
         '/home_page': (context) => HomePage(),
         '/drawer_page': (context) => Drawer(),
+        '/chat_page': (context) => ChatPage(),
       },
     );
   }
