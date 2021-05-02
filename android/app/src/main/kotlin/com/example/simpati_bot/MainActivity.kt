@@ -1,4 +1,4 @@
-package com.example.simpati_bot
+package com.project.simpati_bot
 
 import io.flutter.embedding.android.FlutterActivity
 

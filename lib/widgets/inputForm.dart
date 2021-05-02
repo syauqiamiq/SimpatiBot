@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:simpati_bot/utils/colorPallete.dart';
 
 class InputForm extends StatelessWidget {
   final String label;
   final TextEditingController controller;
   final bool obscureText;
-  InputForm({this.label, this.controller, this.obscureText});
+  final TextInputType keyboardType;
+  final List<TextInputFormatter> inputFormatters;
+  InputForm(
+      {this.label,
+      this.controller,
+      this.obscureText,
+      this.keyboardType,
+      this.inputFormatters});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,6 +21,8 @@ class InputForm extends StatelessWidget {
       height: 50,
       color: Colors.white,
       child: TextField(
+        keyboardType: keyboardType,
+        inputFormatters: inputFormatters,
         obscureText: obscureText,
         controller: controller,
         autocorrect: false,

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:simpati_bot/screens/chat_page.dart';
 import 'package:simpati_bot/screens/home_page.dart';
 import 'package:simpati_bot/screens/login_page.dart';
+import 'package:simpati_bot/screens/login_wrapper.dart';
 import 'package:simpati_bot/screens/register_page.dart';
+
 import 'package:simpati_bot/screens/splash_page.dart';
 import 'package:simpati_bot/screens/getStarted_page.dart';
 import 'package:simpati_bot/screens/welcome_page.dart';
@@ -22,6 +24,7 @@ class PageRoutes extends StatelessWidget {
         '/home_page': (context) => HomePage(),
         '/drawer_page': (context) => Drawer(),
         '/chat_page': (context) => ChatPage(),
+        '/login_wrapper': (context) => LoginWrapper(),
       },
     );
   }

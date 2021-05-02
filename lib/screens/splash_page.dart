@@ -14,7 +14,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3),
-        () => Navigator.pushReplacementNamed(context, '/getStarted_page'));
+        () => Navigator.pushReplacementNamed(context, '/login_wrapper'));
   }
 
   @override

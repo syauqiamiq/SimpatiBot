@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:simpati_bot/screens/register_second_page.dart';
 import 'package:simpati_bot/utils/colorPallete.dart';
 import 'package:simpati_bot/widgets/inputForm.dart';
 import 'package:simpati_bot/widgets/primaryButton.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends StatefulWidget {
+  @override
+  _RegisterPageState createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController jurusanController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +28,7 @@ class RegisterPage extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(
-                    height: 76,
+                    height: 50,
                   ),
                   Image(
                     height: 150,
@@ -53,6 +60,14 @@ class RegisterPage extends StatelessWidget {
                     height: 40,
                   ),
                   InputForm(
+                    label: "Jurusan",
+                    controller: jurusanController,
+                    obscureText: false,
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  InputForm(
                     label: "Email",
                     controller: emailController,
                     obscureText: false,
@@ -69,11 +84,22 @@ class RegisterPage extends StatelessWidget {
                     height: 40,
                   ),
                   Padding(
-                      padding: const EdgeInsets.only(right: 74, left: 74),
-                      child: PrimaryButton(
-                        label: "Daftar",
-                        onPressed: () {},
-                      )),
+                    padding: const EdgeInsets.only(right: 74, left: 74),
+                    child: PrimaryButton(
+                      label: "Continue",
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegisterSecondPage(
+                                      nameController: nameController,
+                                      emailController: emailController,
+                                      passwordController: passwordController,
+                                      jurusanController: jurusanController,
+                                    )));
+                      },
+                    ),
+                  ),
                   SizedBox(
                     height: 70,
                   )

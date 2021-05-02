@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_dialogflow_v2/flutter_dialogflow_v2.dart' as df;
 import 'package:flutter/material.dart';
 import 'package:simpati_bot/utils/colorPallete.dart';
@@ -92,7 +94,6 @@ class _ChatPageState extends State<ChatPage> {
     textController.clear();
     ChatMessage message = ChatMessage(
       text: text,
-      name: 'Muhammad Prayuda Riansyah',
       type: true,
     );
     setState(() {
@@ -179,22 +180,16 @@ class ChatMessage extends StatelessWidget {
   final String text;
   final String name;
   final bool type;
+  final String userUID = FirebaseAuth.instance.currentUser.uid;
 
   List<Widget> otherMessage(context) {
     return <Widget>[
       Container(
         margin: const EdgeInsets.only(right: 16.0),
-        child: CircleAvatar(
-          child: Container(
-            width: 200,
-            height: 200,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                  image: AssetImage('lib/assets/images/logo.png'),
-                  fit: BoxFit.fill),
-            ),
+        child: Container(
+          child: CircleAvatar(
+            backgroundColor: Colors.transparent,
+            backgroundImage: AssetImage('lib/assets/images/logo.png'),
           ),
         ),
       ),
@@ -202,12 +197,14 @@ class ChatMessage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(this.name,
-                style: TextStyle(
-                    color: Colors.grey[600],
-                    fontFamily: 'Nunito',
-                    fontWeight: FontWeight.w600,
-                    fontSize: 15)),
+            Text(
+              this.name,
+              style: TextStyle(
+                  color: Colors.grey[600],
+                  fontFamily: 'Nunito',
+                  fontWeight: FontWeight.w600,
+                  fontSize: 15),
+            ),
             Container(
               margin: const EdgeInsets.only(top: 5.0),
               padding: EdgeInsets.all(10),
@@ -232,12 +229,26 @@ class ChatMessage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
-            Text(this.name,
-                style: TextStyle(
-                    color: Colors.grey[600],
-                    fontFamily: 'Nunito',
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600)),
+            StreamBuilder<DocumentSnapshot>(
+              stream: FirebaseFirestore.instance
+                  .collection('users')
+                  .doc(userUID)
+                  .snapshots(),
+              builder: (_, snapshot) {
+                if (snapshot.hasData) {
+                  var name = snapshot.data;
+                  return Text(
+                    name["nama"],
+                    style: TextStyle(
+                        color: Colors.grey[600],
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15),
+                  );
+                }
+                return Text("Loading");
+              },
+            ),
             Container(
               margin: const EdgeInsets.only(top: 5.0),
               padding: EdgeInsets.all(10),
@@ -256,16 +267,7 @@ class ChatMessage extends StatelessWidget {
       Container(
         margin: const EdgeInsets.only(left: 16.0),
         child: CircleAvatar(
-          child: Container(
-            width: 200,
-            height: 200,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                  image: AssetImage('lib/assets/images/yuda.jpg'),
-                  fit: BoxFit.fill),
-            ),
-          ),
+          backgroundColor: Colors.grey,
         ),
       ),
     ];

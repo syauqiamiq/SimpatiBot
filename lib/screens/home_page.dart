@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:simpati_bot/screens/sidenav_page.dart';
 import 'package:simpati_bot/utils/colorPallete.dart';
@@ -10,6 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final String userUID = FirebaseAuth.instance.currentUser.uid;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,13 +20,51 @@ class _HomePageState extends State<HomePage> {
       home: Scaffold(
         drawerEnableOpenDragGesture: true,
         drawer: SideNav(
-          nameHeader: "Muhammad Prayuda Riansyah",
-          emailHeader: "example@gmail.com",
+          nameHeader: StreamBuilder<DocumentSnapshot>(
+            stream: FirebaseFirestore.instance
+                .collection('users')
+                .doc(userUID)
+                .snapshots(),
+            builder: (_, snapshot) {
+              if (snapshot.hasData) {
+                var name = snapshot.data;
+                return Text(
+                  name["nama"],
+                  style: TextStyle(
+                      fontFamily: 'Nunito',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black),
+                );
+              }
+              return Text("Loading");
+            },
+          ),
+          emailHeader: StreamBuilder<DocumentSnapshot>(
+            stream: FirebaseFirestore.instance
+                .collection('users')
+                .doc(userUID)
+                .snapshots(),
+            builder: (_, snapshot) {
+              if (snapshot.hasData) {
+                var name = snapshot.data;
+                return Text(
+                  name["noTelp"],
+                  style: TextStyle(
+                      fontFamily: 'Nunito',
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black),
+                );
+              }
+              return Text("Loading");
+            },
+          ),
         ),
         body: SafeArea(
           child: Stack(children: <Widget>[
             Container(
-              color: Pallete.primaryColor,
+              color: Pallete.secondaryColor,
               child: Column(
                 children: [
                   SizedBox(
@@ -46,6 +87,9 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: Row(
@@ -55,42 +99,55 @@ class _HomePageState extends State<HomePage> {
                           height: 80,
                           width: 80,
                           child: CircleAvatar(
-                            child: Container(
-                              width: 200,
-                              height: 200,
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        'lib/assets/images/yuda.jpg'),
-                                    fit: BoxFit.fill),
-                              ),
-                            ),
+                            backgroundColor: Colors.grey[400],
                           ),
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 20,
                         ),
                         Container(
                             width: 216,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Muhammad Prayuda Riansyah",
-                                  style: TextStyle(
-                                      fontFamily: 'Nunito',
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w700),
+                                StreamBuilder<DocumentSnapshot>(
+                                  stream: FirebaseFirestore.instance
+                                      .collection('users')
+                                      .doc(userUID)
+                                      .snapshots(),
+                                  builder: (_, snapshot) {
+                                    if (snapshot.hasData) {
+                                      var name = snapshot.data;
+                                      return Text(
+                                        name["nama"],
+                                        style: TextStyle(
+                                            fontFamily: 'Nunito',
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w700),
+                                      );
+                                    }
+                                    return Text("Loading");
+                                  },
                                 ),
-                                Text(
-                                  "Teknik Informatika",
-                                  style: TextStyle(
-                                      fontFamily: 'Nunito',
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w300),
-                                )
+                                StreamBuilder<DocumentSnapshot>(
+                                  stream: FirebaseFirestore.instance
+                                      .collection('users')
+                                      .doc(userUID)
+                                      .snapshots(),
+                                  builder: (_, snapshot) {
+                                    if (snapshot.hasData) {
+                                      var name = snapshot.data;
+                                      return Text(
+                                        name["jurusan"],
+                                        style: TextStyle(
+                                            fontFamily: 'Nunito',
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w300),
+                                      );
+                                    }
+                                    return Text("Loading");
+                                  },
+                                ),
                               ],
                             )),
                       ],

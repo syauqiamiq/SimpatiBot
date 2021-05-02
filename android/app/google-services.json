@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "984613743698",
+    "project_id": "simpatibot",
+    "storage_bucket": "simpatibot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984613743698:android:79dd874650ed89d02f438b",
+        "android_client_info": {
+          "package_name": "com.project.simpati_bot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984613743698-k3rh02n6v6445ii75b7l988jpv8alq8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9y9JFTZrt4uVE3akJs1oOJJ1UV8Wvfto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984613743698-k3rh02n6v6445ii75b7l988jpv8alq8f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
