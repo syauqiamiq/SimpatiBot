@@ -66,14 +66,9 @@ class _HomePageState extends State<HomePage> {
         body: SafeArea(
           child: Stack(children: <Widget>[
             Container(
-              
-              color: Pallete.secondaryColor,
-              
-              
+              color: Pallete.primaryColor,
               child: Column(
-                
                 children: [
-                  
                   SizedBox(
                     height: 20,
                   ),
@@ -133,11 +128,12 @@ class _HomePageState extends State<HomePage> {
                                             fontWeight: FontWeight.w700),
                                       );
                                     }
-                                    return Text("Loading",
-                                    style: TextStyle(
-                                            fontFamily: 'Nunito',
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w700),
+                                    return Text(
+                                      "Loading",
+                                      style: TextStyle(
+                                          fontFamily: 'Nunito',
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w700),
                                     );
                                   },
                                 ),
@@ -174,108 +170,130 @@ class _HomePageState extends State<HomePage> {
                 minChildSize: 0.7,
                 builder: (BuildContext context, myScrollController) {
                   return Container(
-                    
                     height: 450,
                     width: 100,
                     decoration: BoxDecoration(
-                      color: Colors.white70,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        topRight: Radius.circular(20)
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.3),
-                          offset: Offset(0,-3),
-                          blurRadius: 10
-                        ),
-                      ]
-                    ),
+                        color: Colors.white70,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20)),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.3),
+                              offset: Offset(0, -3),
+                              blurRadius: 10),
+                        ]),
                     margin: EdgeInsets.only(top: 40),
                     child: ClipRRect(
-                    borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(20)),
-                    child: Container(
-                      color: Colors.white70,
-                      padding: EdgeInsets.fromLTRB(20, 30, 20, 20),
-                      child: ListView(
-                        controller: myScrollController,
-                        children: [
-                          ModernNewsCard(
-                            newsTitle: "Kenalan Yuk!",
-                            newsContent: "Jelajahi fitur-fitur serta berbagai hal menarik lainnya disini.",
-                            newsImage: AssetImage('lib/assets/images/kenalanBanner.png'),
-                            onTab: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => InformationPage(title: "Kenalan Yuk dengan Simpati Bot dan Cara menggunakannya", newsImage: AssetImage('lib/assets/images/kenalanBanner.png'), description: "Jelajahi fitur-fitur serta berbagai hal menarik lainnya disini.\nCoba tanyakan sekarang:\n\n\t Kapan Praktikum Pbo kelas A?\n \tAtau yang lainnya"),));
-                            },
-                          ),
-                          ModernNewsCard(
-                            newsTitle: "Siap Jadi Asisten Kamu!",
-                            newsContent: "Simpati  Bot siap menjawab semua pertanyaan kamu mengenai labit, praktikum dan adminitrasi..",
-                            newsImage: AssetImage('lib/assets/images/asistenBanner.png'),
-                            onTab: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => ChatPage()),);
-                            },
-                          ),
-                          ModernNewsCard(
-                            newsTitle: "Kenalan Yuk!",
-                            newsContent: "Jelajahi fitur-fitur serta berbagai hal menarik lainnya disini.",
-                            newsImage: AssetImage('lib/assets/images/kenalanBanner.png'),
-                            onTab: (){},
-                          ),
-                          NewsTitle(
-                            newsTitle: "Simpati Information",
-                            newsContent: "Berbagai Informasi Penting yang harus kamu ketahui",
-                          ),
-                          NewsCard(
-                            newsTitle: "Teknik Informatika",
-                            newsContent:
-                                "Teknik Informatika sangat dibutuhkan bagi masa depan",
-                            newsImage: AssetImage('lib/assets/images/news.png'),
-                          ),
-                          NewsCard(
-                            newsTitle: "Teknik Informatika",
-                            newsContent:
-                                "Teknik Informatika sangat dibutuhkan bagi masa depan",
-                            newsImage: AssetImage('lib/assets/images/news.png'),
-                          ),
-                          NewsCard(
-                            newsTitle: "Teknik Informatika",
-                            newsContent:
-                                "Teknik Informatika sangat dibutuhkan bagi masa depan",
-                            newsImage: AssetImage('lib/assets/images/news.png'),
-                          ),
-                          NewsCard(
-                            newsTitle: "Teknik Informatika",
-                            newsContent:
-                                "Teknik Informatika sangat dibutuhkan bagi masa depan",
-                            newsImage: AssetImage('lib/assets/images/news.png'),
-                          ),
-                          NewsCard(
-                            newsTitle: "Teknik Informatika",
-                            newsContent:
-                                "Teknik Informatika sangat dibutuhkan bagi masa depan",
-                            newsImage: AssetImage('lib/assets/images/news.png'),
-                          ),
-                          NewsCard(
-                            newsTitle: "Teknik Informatika",
-                            newsContent:
-                                "Teknik Informatika sangat dibutuhkan bagi masa depan",
-                            newsImage: AssetImage('lib/assets/images/news.png'),
-                          ),
-                          NewsCard(
-                            newsTitle: "Teknik Informatika",
-                            newsContent:
-                                "Teknik Informatika sangat dibutuhkan bagi masa depan",
-                            newsImage: AssetImage('lib/assets/images/news.png'),
-                          ),
-                        ],
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(20)),
+                      child: Container(
+                        color: Colors.white70,
+                        padding: EdgeInsets.fromLTRB(20, 30, 20, 20),
+                        child: ListView(
+                          controller: myScrollController,
+                          children: [
+                            ModernNewsCard(
+                              newsTitle: "Kenalan Yuk!",
+                              newsContent:
+                                  "Jelajahi fitur-fitur serta berbagai hal menarik lainnya disini.",
+                              newsImage: AssetImage(
+                                  'lib/assets/images/kenalanBanner.png'),
+                              onTab: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => InformationPage(
+                                          title:
+                                              "Kenalan Yuk dengan Simpati Bot dan Cara menggunakannya",
+                                          newsImage: AssetImage(
+                                              'lib/assets/images/kenalanBanner.png'),
+                                          description:
+                                              "Jelajahi fitur-fitur serta berbagai hal menarik lainnya disini.\nCoba tanyakan sekarang:\n\n\t Kapan Praktikum Pbo kelas A?\n \tAtau yang lainnya"),
+                                    ));
+                              },
+                            ),
+                            ModernNewsCard(
+                              newsTitle: "Siap Jadi Asisten Kamu!",
+                              newsContent:
+                                  "Simpati  Bot siap menjawab semua pertanyaan kamu mengenai labit, praktikum dan adminitrasi..",
+                              newsImage: AssetImage(
+                                  'lib/assets/images/asistenBanner.png'),
+                              onTab: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ChatPage()),
+                                );
+                              },
+                            ),
+                            ModernNewsCard(
+                              newsTitle: "Kenalan Yuk!",
+                              newsContent:
+                                  "Jelajahi fitur-fitur serta berbagai hal menarik lainnya disini.",
+                              newsImage: AssetImage(
+                                  'lib/assets/images/kenalanBanner.png'),
+                              onTab: () {},
+                            ),
+                            NewsTitle(
+                              newsTitle: "Simpati Information",
+                              newsContent:
+                                  "Berbagai Informasi Penting yang harus kamu ketahui",
+                            ),
+                            NewsCard(
+                              newsTitle: "Teknik Informatika",
+                              newsContent:
+                                  "Teknik Informatika sangat dibutuhkan bagi masa depan",
+                              newsImage:
+                                  AssetImage('lib/assets/images/news.png'),
+                            ),
+                            NewsCard(
+                              newsTitle: "Teknik Informatika",
+                              newsContent:
+                                  "Teknik Informatika sangat dibutuhkan bagi masa depan",
+                              newsImage:
+                                  AssetImage('lib/assets/images/news.png'),
+                            ),
+                            NewsCard(
+                              newsTitle: "Teknik Informatika",
+                              newsContent:
+                                  "Teknik Informatika sangat dibutuhkan bagi masa depan",
+                              newsImage:
+                                  AssetImage('lib/assets/images/news.png'),
+                            ),
+                            NewsCard(
+                              newsTitle: "Teknik Informatika",
+                              newsContent:
+                                  "Teknik Informatika sangat dibutuhkan bagi masa depan",
+                              newsImage:
+                                  AssetImage('lib/assets/images/news.png'),
+                            ),
+                            NewsCard(
+                              newsTitle: "Teknik Informatika",
+                              newsContent:
+                                  "Teknik Informatika sangat dibutuhkan bagi masa depan",
+                              newsImage:
+                                  AssetImage('lib/assets/images/news.png'),
+                            ),
+                            NewsCard(
+                              newsTitle: "Teknik Informatika",
+                              newsContent:
+                                  "Teknik Informatika sangat dibutuhkan bagi masa depan",
+                              newsImage:
+                                  AssetImage('lib/assets/images/news.png'),
+                            ),
+                            NewsCard(
+                              newsTitle: "Teknik Informatika",
+                              newsContent:
+                                  "Teknik Informatika sangat dibutuhkan bagi masa depan",
+                              newsImage:
+                                  AssetImage('lib/assets/images/news.png'),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
                   );
-                  
-
                 }),
             Container(
               width: double.infinity,

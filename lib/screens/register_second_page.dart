@@ -148,8 +148,9 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
                                         widget.emailController.text,
                                         widget.passwordController.text)
                                     .then((result) {
-                                  if (result != null) {
+                                  if (result == null) {
                                     print(result);
+                                    print(widget.emailController.text);
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -159,6 +160,7 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
                                                 )));
                                     widget.nameController.clear();
                                     widget.emailController.clear();
+                                    widget.jurusanController.clear();
                                     widget.passwordController.clear();
                                     setState(() {
                                       isLoading = false;

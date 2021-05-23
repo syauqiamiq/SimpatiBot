@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Documents\\Project\\Simpati\\SimpatiBot3\\SimpatiBot\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\FLUTTER\\Simpati Bot\\simpati_bot\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\Documents\\Project\\Simpati\\SimpatiBot3\\SimpatiBot\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\FLUTTER\\Simpati Bot\\simpati_bot\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
