@@ -22,9 +22,12 @@ class _ChatPageState extends State<ChatPage> {
       data: IconThemeData(color: Theme.of(context).accentColor),
       child: Container(
         margin: EdgeInsets.fromLTRB(10, 0, 10, 15),
+        
+        
         child: Row(
           children: <Widget>[
             Flexible(
+              
               child: TextField(
                 controller: textController,
                 autocorrect: false,
@@ -126,8 +129,8 @@ class _ChatPageState extends State<ChatPage> {
             ),
             Image(
               image: AssetImage('lib/assets/images/logo.png'),
-              width: 50,
-              height: 50,
+              width: 47,
+              height: 47,
             ),
             SizedBox(
               width: 10,

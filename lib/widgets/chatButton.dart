@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simpati_bot/utils/colorPallete.dart';
 
 class ChatButton extends StatelessWidget {
   final Function onPressed;
@@ -9,10 +10,10 @@ class ChatButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 240,
-      height: 46,
+      height: 60,
       child: FloatingActionButton.extended(
         onPressed: onPressed,
-        backgroundColor: Colors.white,
+        backgroundColor: Pallete.primaryCleanColor,
         icon: icon,
         elevation: 15,
         label: Text(
