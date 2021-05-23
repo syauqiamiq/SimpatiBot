@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/project/simpati_bot/BuildConfig.java
+ com.project.simpati_bot.BuildConfig
