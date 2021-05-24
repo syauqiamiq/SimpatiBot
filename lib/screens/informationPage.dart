@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:simpati_bot/widgets/chatButton.dart';
+import 'package:simpati_bot/screens/chat_page.dart';
 
 class InformationPage extends StatelessWidget {
   final String title;
@@ -70,7 +72,7 @@ class InformationPage extends StatelessWidget {
             Row(children: [
               Text("Simpati Team",
                   style: TextStyle(
-                    color: Colors.black87,
+                    color: Colors.black45,
                     fontSize: 12,
                     fontFamily: 'Nunito',
                     fontWeight: FontWeight.w500,
@@ -82,12 +84,27 @@ class InformationPage extends StatelessWidget {
             ),
             Text(description,
                 style: TextStyle(
-                  color: Colors.black87,
+                  color: Colors.blueGrey[800],
                   fontSize: 16,
                   fontFamily: 'Nunito',
                   fontWeight: FontWeight.w600,
                 )),
-            SizedBox(height: 25.0)
+            SizedBox(height: 30.0),
+             ChatButton(
+                    label: "Chat Now",
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                          MaterialPageRoute(
+                          builder: (context) => ChatPage()),
+                      );},
+                    icon: Image(
+                      image: AssetImage('lib/assets/images/logo.png'),
+                      width: 40,
+                      height: 40,
+                    ),
+                  ),
+            SizedBox(height: 18.0,)
           ],
         ),
       ),

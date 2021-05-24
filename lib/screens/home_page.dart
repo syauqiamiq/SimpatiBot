@@ -209,7 +209,7 @@ class _HomePageState extends State<HomePage> {
                                           newsImage: AssetImage(
                                               'lib/assets/images/kenalanBanner.png'),
                                           description:
-                                              "Jelajahi fitur-fitur serta berbagai hal menarik lainnya disini.\nCoba tanyakan sekarang:\n\n\t Kapan Praktikum Pbo kelas A?\n \tAtau yang lainnya"),
+                                              "Halo.. Perkenalkan aku adalah simpati bot, bot yang siap menjawab berbagai pertanyaan mengenai jadwal praktikum, staf asisten, serta adminitrasi laboratorium informatika UMM.\n\nJelajahi fitur-fitur serta berbagai hal menarik lainnya yuk!.\n\nSetelah kamu klik tombol 'Chat Now!' pada halaman utama, kamu langsung bisa memenanyakan berbagai hal seputar jadwal praktikum, staf asisten, serta adminitrasi laboratorium informatika UMM.\n\nCus langsung tanyakan sekarang. Atau kalau kamu masih bingung, bisa nih tanyakan seperti pertanyaan di bawah, dijamin langsung dijawab sama aku, simpati bot:) :\n\n\t Kapan Praktikum Pbo kelas A?\n \tSiapa saja aslab di Informatika UMM?\n \tAtau yang lainnya\n\nNah tunggu apalagi nih, langsung klik tombol chat now! di bawah ini sekarang"),
                                     ));
                               },
                             ),
