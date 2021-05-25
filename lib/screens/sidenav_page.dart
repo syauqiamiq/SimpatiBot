@@ -29,8 +29,24 @@ class _SideNavState extends State<SideNav> {
                 UserAccountsDrawerHeader(
                   accountName: widget.nameHeader,
                   accountEmail: widget.emailHeader,
-                  currentAccountPicture: CircleAvatar(
-                    backgroundColor: Colors.grey[400],
+                  currentAccountPicture: StreamBuilder<DocumentSnapshot>(
+                    stream: FirebaseFirestore.instance
+                        .collection('users')
+                        .doc(userUID)
+                        .snapshots(),
+                    builder: (_, snapshot) {
+                      if (snapshot.hasData) {
+                        var name = snapshot.data;
+                        return CircleAvatar(
+                          backgroundImage: NetworkImage(
+                            name["profileUrl"],
+                          ),
+                        );
+                      }
+                      return CircleAvatar(
+                        backgroundColor: Colors.grey[400],
+                      );
+                    },
                   ),
                   decoration: BoxDecoration(
                     color: Pallete.primaryColor,

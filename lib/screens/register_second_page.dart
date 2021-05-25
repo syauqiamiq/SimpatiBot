@@ -175,6 +175,7 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
                                       'noTelp': phoneController.text,
                                       'nim': nimController.text,
                                       'kelas': kelasController,
+                                      'profileUrl': "",
                                     });
                                     widget.nameController.clear();
                                     widget.emailController.clear();

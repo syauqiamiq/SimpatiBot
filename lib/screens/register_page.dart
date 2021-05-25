@@ -89,14 +89,16 @@ class _RegisterPageState extends State<RegisterPage> {
                       label: "Continue",
                       onPressed: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => RegisterSecondPage(
-                                      nameController: nameController,
-                                      emailController: emailController,
-                                      passwordController: passwordController,
-                                      jurusanController: jurusanController,
-                                    )));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegisterSecondPage(
+                              nameController: nameController,
+                              emailController: emailController,
+                              passwordController: passwordController,
+                              jurusanController: jurusanController,
+                            ),
+                          ),
+                        );
                       },
                     ),
                   ),

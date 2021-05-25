@@ -5,9 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:simpati_bot/utils/colorPallete.dart';
 
 class ChatPage extends StatefulWidget {
-  ChatPage({Key key, this.title}) : super(key: key);
+  ChatPage({
+    Key key,
+    this.title,
+    this.imagePath,
+  }) : super(key: key);
 
   final String title;
+  final String imagePath;
 
   @override
   _ChatPageState createState() => _ChatPageState();
@@ -22,12 +27,9 @@ class _ChatPageState extends State<ChatPage> {
       data: IconThemeData(color: Theme.of(context).accentColor),
       child: Container(
         margin: EdgeInsets.fromLTRB(10, 0, 10, 15),
-        
-        
         child: Row(
           children: <Widget>[
             Flexible(
-              
               child: TextField(
                 controller: textController,
                 autocorrect: false,
@@ -269,8 +271,24 @@ class ChatMessage extends StatelessWidget {
       ),
       Container(
         margin: const EdgeInsets.only(left: 16.0),
-        child: CircleAvatar(
-          backgroundColor: Colors.grey,
+        child: StreamBuilder<DocumentSnapshot>(
+          stream: FirebaseFirestore.instance
+              .collection('users')
+              .doc(userUID)
+              .snapshots(),
+          builder: (_, snapshot) {
+            if (snapshot.hasData) {
+              var name = snapshot.data;
+              return CircleAvatar(
+                backgroundImage: NetworkImage(
+                  name["profileUrl"],
+                ),
+              );
+            }
+            return CircleAvatar(
+              backgroundColor: Colors.grey[400],
+            );
+          },
         ),
       ),
     ];
