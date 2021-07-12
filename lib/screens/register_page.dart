@@ -24,8 +24,8 @@ class _RegisterPageState extends State<RegisterPage> {
             color: Colors.white,
             width: double.infinity,
             height: MediaQuery.of(context).size.height,
-            child: ListView(children: [
-              Column(
+            child: SingleChildScrollView(
+              child: Column(
                 children: [
                   SizedBox(
                     height: 50,
@@ -107,7 +107,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   )
                 ],
               ),
-            ]),
+            ),
           ),
         ),
       ),

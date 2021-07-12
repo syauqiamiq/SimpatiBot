@@ -12,56 +12,58 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\debug\AndroidManifest.xml:6:5-66
-14-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\debug\AndroidManifest.xml:6:22-64
-15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
-15-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
-16
-17    <queries>
-17-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-15:15
-18        <intent>
-18-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-14:18
-19            <action android:name="android.intent.action.GET_CONTENT" />
-19-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-72
-19-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:21-69
-20
-21            <data android:mimeType="*/*" />
-21-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
-21-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
-22        </intent>
-23    </queries>
-24
-25    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-25-->[:image_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-81
-25-->[:image_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-78
-26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-26-->[com.google.firebase:firebase-auth:20.0.4] C:\Users\Syauqi-PC\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:24:5-79
-26-->[com.google.firebase:firebase-auth:20.0.4] C:\Users\Syauqi-PC\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:24:22-76
+14-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:43:5-67
+14-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:43:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:44:5-79
+15-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:44:22-76
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:45:5-79
+16-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:45:22-77
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:46:5-66
+17-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:46:22-63
+18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+18-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:47:5-80
+18-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:47:22-78
+19
+20    <queries>
+20-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-15:15
+21        <intent>
+21-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-14:18
+22            <action android:name="android.intent.action.GET_CONTENT" />
+22-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-72
+22-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:21-69
+23
+24            <data android:mimeType="*/*" />
+24-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+24-->[:file_picker] D:\FLUTTER\Simpati Bot\simpati_bot\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
+25        </intent>
+26    </queries>
 27
 28    <application
-28-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:3:4-40:19
+28-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:4:4-42:19
 29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 29-->[androidx.core:core:1.1.0] C:\Users\Syauqi-PC\.gradle\caches\transforms-2\files-2.1\d481b4719f34ec119768e958e701eaf6\core-1.1.0\AndroidManifest.xml:24:18-86
 30        android:debuggable="true"
 31        android:icon="@mipmap/ic_launcher"
-31-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:5:9-43
-32        android:label="simpati_bot" >
-32-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:4:9-36
+31-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:6:9-43
+32        android:label="Simpati Bot" >
+32-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:5:9-36
 33        <activity
-33-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:6:9-34:20
+33-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:8:9-36:20
 34            android:name="com.project.simpati_bot.MainActivity"
-34-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:7:13-41
+34-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:9:13-41
 35            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-35-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:10:13-163
+35-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:12:13-163
 36            android:hardwareAccelerated="true"
-36-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:11:13-47
+36-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:13:13-47
 37            android:launchMode="singleTop"
-37-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:8:13-43
+37-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:10:13-43
 38            android:theme="@style/LaunchTheme"
-38-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:9:13-47
+38-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:11:13-47
 39            android:windowSoftInputMode="adjustResize" >
-39-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:12:13-55
+39-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:14:13-55
 40
 41            <!--
 42                 Specifies an Android theme to apply to this Activity as soon as
@@ -70,11 +72,11 @@
 45                 to determine the Window background behind the Flutter UI.
 46            -->
 47            <meta-data
-47-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:17:13-20:17
+47-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:19:13-22:17
 48                android:name="io.flutter.embedding.android.NormalTheme"
-48-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:18:15-70
+48-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:20:15-70
 49                android:resource="@style/NormalTheme" />
-49-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:19:15-52
+49-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:21:15-52
 50            <!--
 51                 Displays an Android View that continues showing the launch screen
 52                 Drawable until Flutter paints its first frame, then this splash
@@ -83,21 +85,21 @@
 55                 Flutter's first frame.
 56            -->
 57            <meta-data
-57-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:26:13-29:17
+57-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:28:13-31:17
 58                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-58-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:27:15-79
+58-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:29:15-79
 59                android:resource="@drawable/launch_background" />
-59-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:28:15-61
+59-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:30:15-61
 60
 61            <intent-filter>
-61-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:30:13-33:29
+61-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:32:13-35:29
 62                <action android:name="android.intent.action.MAIN" />
-62-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:31:17-68
-62-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:31:25-66
+62-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:33:17-68
+62-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:33:25-66
 63
 64                <category android:name="android.intent.category.LAUNCHER" />
-64-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:32:17-76
-64-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:32:27-74
+64-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:34:17-76
+64-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:34:27-74
 65            </intent-filter>
 66        </activity>
 67        <!--
@@ -105,11 +107,11 @@
 69             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 70        -->
 71        <meta-data
-71-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:37:9-39:33
+71-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:39:9-41:33
 72            android:name="flutterEmbedding"
-72-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:38:13-44
+72-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:40:13-44
 73            android:value="2" />
-73-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:39:13-30
+73-->D:\FLUTTER\Simpati Bot\simpati_bot\android\app\src\main\AndroidManifest.xml:41:13-30
 74
 75        <service
 75-->[:firebase_auth] D:\FLUTTER\Simpati Bot\simpati_bot\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
